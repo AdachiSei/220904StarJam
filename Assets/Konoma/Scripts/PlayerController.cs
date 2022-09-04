@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (_muteki == false)
         {
@@ -77,6 +77,9 @@ public class PlayerController : MonoBehaviour
 
             Invoke("MuteliOn", _mutekiTime);
         }
+
+        Destroy(collision.gameObject);
+        
     }
 
     private void MuteliOn()

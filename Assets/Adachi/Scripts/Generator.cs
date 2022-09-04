@@ -49,9 +49,9 @@ public class Generator : MonoBehaviour
             _coolTime = Random.Range(_minTime,_maxTime);
             _randomPosY = Random.Range(_minPosY,_maxPosY);
             yield return new WaitForSeconds(_coolTime);
-            Instantiate(_enemies[Random.Range(0,_enemies.Length)],
-                        new Vector3(Pos_X,_randomPosY),
-                        Quaternion.identity);
+            Instantiate(_enemies[Random.Range(0, _enemies.Length)],
+                        new Vector3(Pos_X, _randomPosY, 0f),
+                        Quaternion.identity); ;
         }
     }
 
@@ -63,8 +63,8 @@ public class Generator : MonoBehaviour
             _randomPosY = Random.Range(_minPosY, _maxPosY);
             yield return new WaitForSeconds(_coolTime);
             Instantiate(_items[Random.Range(0, _items.Length)],
-                        new Vector3(Pos_X, _randomPosY),
-                        Quaternion.identity);
+                        new Vector3(Pos_X, _randomPosY, 0f),
+                        Quaternion.identity); ;
         }
     }
 
