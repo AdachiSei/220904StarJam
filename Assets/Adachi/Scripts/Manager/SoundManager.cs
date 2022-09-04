@@ -41,6 +41,8 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
     protected override void Awake()
     {
         base.Awake();
+        //+= Pause;
+        //+= Restart;
 
         if (TryGetComponent(out _audioSource))
         {

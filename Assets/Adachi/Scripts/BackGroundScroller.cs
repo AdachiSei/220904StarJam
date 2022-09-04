@@ -22,7 +22,8 @@ public class BackGroundScroller : MonoBehaviour
 
     void Awake()
     {
-        
+        //+= Pause;
+        //+= Restart;
     }
 
     void Update()
