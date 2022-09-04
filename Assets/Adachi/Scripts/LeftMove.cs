@@ -8,10 +8,31 @@ public class LeftMove : MonoBehaviour
     [Header("スピード")]
     float _speed = -0.03f;
 
+    bool _isPause = true;
+
+    void Awake()
+    {
+        //+= Pause;
+        //+= Restart;
+    }
+
     void Update()
     {
-        var pos = gameObject.transform.position;
-        pos.x += _speed;
-        gameObject.transform.position = pos;
+        if (_isPause)
+        {
+            var pos = gameObject.transform.position;
+            pos.x += _speed;
+            gameObject.transform.position = pos;
+        }
+    }
+
+    void Pause()
+    {
+        _isPause = false;
+    }
+
+    void Replay()
+    {
+        _isPause = true;
     }
 }

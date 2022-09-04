@@ -34,6 +34,8 @@ public class Generator : MonoBehaviour
 
     void Awake()
     {
+        //+= Pause;
+        //+= Restart;
         StartCoroutine(EnemyGenerate());
     }
 

@@ -106,4 +106,14 @@ public class SoundManager : SingletonMonoBehaviour<SoundManager>
                 break;
         }
     }
+
+    void Pause()
+    {
+        _audioSource.Stop();
+    }
+
+    void Restart()
+    {
+        _audioSource.Play();
+    }
 }

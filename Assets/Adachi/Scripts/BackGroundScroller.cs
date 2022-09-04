@@ -16,20 +16,40 @@ public class BackGroundScroller : MonoBehaviour
     [Header("この地点を超えたら左にワープする")]
     float _warpPosX = 25.5f;
 
+    bool _isPlay = true;
+
     const int ONE = 1;
+
+    void Awake()
+    {
+        
+    }
 
     void Update()
     {
-        _background[0].gameObject.transform.position += new Vector3(_speed, 0f);
-        _background[ONE].gameObject.transform.position += new Vector3(_speed, 0f);
+        if (_isPlay)
+        {
+            _background[0].gameObject.transform.position += new Vector3(_speed, 0f);
+            _background[ONE].gameObject.transform.position += new Vector3(_speed, 0f);
 
-        if(_background[0].gameObject.transform.position.x >= _warpPosX)
-        {
-            _background[0].gameObject.transform.position = new Vector3(-_warpPosX, 0f);
+            if (_background[0].gameObject.transform.position.x >= _warpPosX)
+            {
+                _background[0].gameObject.transform.position = new Vector3(-_warpPosX, 0f);
+            }
+            else if (_background[ONE].gameObject.transform.position.x >= _warpPosX)
+            {
+                _background[ONE].gameObject.transform.position = new Vector3(-_warpPosX, 0f);
+            }
         }
-        if (_background[ONE].gameObject.transform.position.x >= _warpPosX)
-        {
-            _background[ONE].gameObject.transform.position = new Vector3(-_warpPosX,0f);
-        }
+    }
+
+    void Pause()
+    {
+        _isPlay = false;
+    }
+
+    void Restart()
+    {
+        _isPlay = true;
     }
 }
