@@ -33,11 +33,11 @@ public class BackGroundScroller : MonoBehaviour
             _background[0].gameObject.transform.position += new Vector3(_speed, 0f);
             _background[ONE].gameObject.transform.position += new Vector3(_speed, 0f);
 
-            if (_background[0].gameObject.transform.position.x >= _warpPosX)
+            if (_background[0].gameObject.transform.position.x <= _warpPosX)
             {
                 _background[0].gameObject.transform.position = new Vector3(-_warpPosX, 0f);
             }
-            else if (_background[ONE].gameObject.transform.position.x >= _warpPosX)
+            else if (_background[ONE].gameObject.transform.position.x <= _warpPosX)
             {
                 _background[ONE].gameObject.transform.position = new Vector3(-_warpPosX, 0f);
             }
