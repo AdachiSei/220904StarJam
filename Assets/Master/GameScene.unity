@@ -214,6 +214,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5289760202903000648, guid: c4a375ccf326f7a49b701f29e136ad1d, type: 3}
+      propertyPath: _gameBGM
+      value: 
+      objectReference: {fileID: 8300000, guid: 717b5a6679704ee4fa44fc343dfcd7fd, type: 3}
+    - target: {fileID: 5289760202903000648, guid: c4a375ccf326f7a49b701f29e136ad1d, type: 3}
+      propertyPath: _deathSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 2bc4d61b192f57240ad9889d9e2676ed, type: 3}
+    - target: {fileID: 5289760202903000648, guid: c4a375ccf326f7a49b701f29e136ad1d, type: 3}
+      propertyPath: _titleBGM
+      value: 
+      objectReference: {fileID: 8300000, guid: d2d30017aceb3b0468a836683a1ac0ed, type: 3}
+    - target: {fileID: 5289760202903000648, guid: c4a375ccf326f7a49b701f29e136ad1d, type: 3}
+      propertyPath: _enemykSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 89d2604065609f043ad1f4da3a6de9a6, type: 3}
+    - target: {fileID: 5289760202903000648, guid: c4a375ccf326f7a49b701f29e136ad1d, type: 3}
+      propertyPath: _resultBGM
+      value: 
+      objectReference: {fileID: 8300000, guid: 023ab069799b74c4c8130c49b004fe9b, type: 3}
     - target: {fileID: 5289760202903000649, guid: c4a375ccf326f7a49b701f29e136ad1d, type: 3}
       propertyPath: m_RootOrder
       value: 3
