@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PouseButton : MonoBehaviour
 {
     [SerializeField]
+    [Header("É|Å[ÉY")]
     Text _pauseText;
 
 
