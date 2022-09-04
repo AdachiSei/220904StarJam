@@ -7,12 +7,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] int _junp;
     [SerializeField] int _overline;
     [SerializeField] int _mutekiTime;
+    [SerializeField] int _scoreCount;
 
     [SerializeField] bool _muteki;
 
     Rigidbody2D _rb2;
 
     private Vector2 pos;
+
     void Awake()
     {
         
@@ -25,6 +27,7 @@ public class PlayerController : MonoBehaviour
             _rb2 = GetComponent<Rigidbody2D>();
         }
     }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -41,6 +44,10 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("ìGÇ…ìñÇΩÇ¡ÇΩÅB");
 
+                SoundManager.Instance.PlaySFX(SFXType.Enemy);
+
+                ScoreManager.Instance.AddScore(_scoreCount);
+
                 this.gameObject.SetActive(false);
             }
         }
@@ -50,6 +57,8 @@ public class PlayerController : MonoBehaviour
             Debug.Log("ñ≥ìG");
 
             _muteki = true;
+
+            SoundManager.Instance.PlaySFX(SFXType.Item);
 
             Invoke("MuteliOn", _mutekiTime);
         }
