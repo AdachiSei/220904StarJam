@@ -22,8 +22,8 @@ public class BackGroundScroller : MonoBehaviour
 
     void Awake()
     {
-        //+= Pause;
-        //+= Restart;
+        PauseManager.Instance.OnPause += Pause;
+        PauseManager.Instance.OnRestart += Restart;
     }
 
     void Update()

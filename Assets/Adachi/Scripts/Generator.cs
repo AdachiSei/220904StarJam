@@ -32,11 +32,14 @@ public class Generator : MonoBehaviour
     float _coolTime;
     float _randomPosY;
 
+    const float Pos_X = 9f;
+
     void Awake()
     {
-        //+= Pause;
-        //+= Restart;
+        PauseManager.Instance.OnPause += Pause;
+        PauseManager.Instance.OnRestart += Restart;
         StartCoroutine(EnemyGenerate());
+        StartCoroutine(ItemGenerate());
     }
 
     IEnumerator EnemyGenerate()
@@ -47,7 +50,7 @@ public class Generator : MonoBehaviour
             _randomPosY = Random.Range(_minPosY,_maxPosY);
             yield return new WaitForSeconds(_coolTime);
             Instantiate(_enemies[Random.Range(0,_enemies.Length)],
-                        new Vector3(0f,_randomPosY),
+                        new Vector3(Pos_X,_randomPosY),
                         Quaternion.identity);
         }
     }
@@ -60,7 +63,7 @@ public class Generator : MonoBehaviour
             _randomPosY = Random.Range(_minPosY, _maxPosY);
             yield return new WaitForSeconds(_coolTime);
             Instantiate(_items[Random.Range(0, _items.Length)],
-                        new Vector3(0f, _randomPosY),
+                        new Vector3(Pos_X, _randomPosY),
                         Quaternion.identity);
         }
     }

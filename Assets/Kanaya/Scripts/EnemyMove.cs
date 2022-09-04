@@ -9,6 +9,12 @@ public class EnemyMove : MonoBehaviour
     [Header("è„â∫ç∑")]
     float _move = 3;
 
+    private void Awake()
+    {
+        PauseManager.Instance.OnPause += Pause;
+        PauseManager.Instance.OnRestart += Restart;
+    }
+
     private void Update()
     {
         Vector2 pos = transform.position;
@@ -18,5 +24,15 @@ public class EnemyMove : MonoBehaviour
         transform.position = new Vector2(transform.position.x, pos.y);
 
         transform.position = pos; 
+    }
+    
+    void Pause()
+    {
+        this.gameObject.SetActive(false);
+    }
+
+    void Restart()
+    {
+        this.gameObject.SetActive(true);
     }
 }

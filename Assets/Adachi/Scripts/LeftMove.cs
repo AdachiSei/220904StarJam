@@ -12,8 +12,8 @@ public class LeftMove : MonoBehaviour
 
     void Awake()
     {
-        //+= Pause;
-        //+= Restart;
+        PauseManager.Instance.OnPause += Pause;
+        PauseManager.Instance.OnRestart += Restart;
     }
 
     void Update()
@@ -31,7 +31,7 @@ public class LeftMove : MonoBehaviour
         _isPause = false;
     }
 
-    void Replay()
+    void Restart()
     {
         _isPause = true;
     }

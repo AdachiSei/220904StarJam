@@ -45,13 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338de675e2ea7db468b6f28fa2a72336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _titleBGM: {fileID: 0}
-  _gameBGM: {fileID: 0}
-  _resultBGM: {fileID: 0}
-  _invincibleBGM: {fileID: 0}
-  _deathSFX: {fileID: 0}
-  _enemykSFX: {fileID: 0}
-  _itemSFX: {fileID: 0}
+  _titleBGM: {fileID: 8300000, guid: d2d30017aceb3b0468a836683a1ac0ed, type: 3}
+  _gameBGM: {fileID: 8300000, guid: 717b5a6679704ee4fa44fc343dfcd7fd, type: 3}
+  _resultBGM: {fileID: 8300000, guid: 023ab069799b74c4c8130c49b004fe9b, type: 3}
+  _invincibleBGM: {fileID: 8300000, guid: cd999f6f8ea5b2c47a8d5eb77c82514b, type: 3}
+  _deathSFX: {fileID: 8300000, guid: 2bc4d61b192f57240ad9889d9e2676ed, type: 3}
+  _enemykSFX: {fileID: 8300000, guid: 89d2604065609f043ad1f4da3a6de9a6, type: 3}
+  _itemSFX: {fileID: 8300000, guid: 0c290b83512c02e4cae34317cfe4a66c, type: 3}
 --- !u!82 &5289760202903000655
 AudioSource:
   m_ObjectHideFlags: 0

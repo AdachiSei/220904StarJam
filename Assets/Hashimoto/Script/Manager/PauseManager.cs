@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 public class PauseManager : SingletonMonoBehaviour<PauseManager>
 {
     public event Action OnPause;
-    public event Action OnResume;
+    public event Action OnRestart;
 
     bool _isPause;
+
+    public Image _pausePanel;
 
     public void Pause()
     {
@@ -17,10 +20,12 @@ public class PauseManager : SingletonMonoBehaviour<PauseManager>
             case false:
                 OnPause.Invoke();
                 _isPause = true;
+                _pausePanel.gameObject.SetActive(true);
                 break;
             case true:
-                OnResume.Invoke();
+                OnRestart.Invoke();
                 _isPause = false;
+                _pausePanel.gameObject.SetActive(false);
                 break;
         }
     }

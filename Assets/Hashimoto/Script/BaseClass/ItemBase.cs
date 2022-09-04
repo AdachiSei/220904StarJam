@@ -13,6 +13,8 @@ public class ItemBase : MonoBehaviour
         if (collision.gameObject.tag == "Player")//‚Ü‚¾Interface‚Å‚â‚é‚©Œˆ‚Ü‚Á‚Ä‚È‚¢
         {
             ItemEffect();
+            SoundManager.Instance.PlaySFX(SFXType.Item);
+            Destroy(gameObject);
         }
     }
 

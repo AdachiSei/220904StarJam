@@ -13,7 +13,7 @@ public class PouseButton : MonoBehaviour
     private void Awake()
     {
         PauseManager.Instance.OnPause += OnPause;
-        PauseManager.Instance.OnResume += OnResume;
+        PauseManager.Instance.OnRestart += OnResume;
         _pauseText.text = "É|Å[ÉY";
     }
 
