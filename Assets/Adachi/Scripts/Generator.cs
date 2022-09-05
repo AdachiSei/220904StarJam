@@ -75,7 +75,7 @@ public class Generator : MonoBehaviour
 
     void Restart()
     {
-        EnemyGenerate();
-        ItemGenerate();
+        StartCoroutine(EnemyGenerate());
+        StartCoroutine(ItemGenerate());
     }
 }

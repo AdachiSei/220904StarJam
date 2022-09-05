@@ -9,6 +9,4 @@ public class UIManager : SingletonMonoBehaviour<UIManager>
 
     [SerializeField]
     Text _scoreText;
-
-
 }

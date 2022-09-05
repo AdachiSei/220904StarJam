@@ -44,9 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b0cfe9179d0f164ea4bc73a22d01ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemies: []
-  _items: []
+  _enemies:
+  - {fileID: 4656381654867374228, guid: bbab8665024a1aa409e781094c7eb43f, type: 3}
+  - {fileID: 5916370975574387613, guid: a6d4bbf3ad0d88342b108b1d97780e0b, type: 3}
+  _items:
+  - {fileID: 85792268206160462, guid: 49172da52f29b2d449637938b0463d50, type: 3}
+  - {fileID: 7059551575449818441, guid: f2c5f49314a97a645a9633e9ea183c42, type: 3}
   _minTime: 1
-  _maxTime: 6
+  _maxTime: 3
   _minPosY: -4
   _maxPosY: 4

@@ -6,14 +6,12 @@ using UnityEngine;
 /// </summary>
 public class Item : ItemBase
 {
-    public int Score => _score;
-
     [SerializeField]
     [Header("Score‰ÁŽZ—Ê")]
-    int _score;
+    const int SCORE = 20;
 
     protected override void ItemEffect()
     {
-        ScoreManager.Instance.AddScore(Score);
+        ScoreManager.Instance.AddScore(SCORE);
     }
 }

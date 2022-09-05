@@ -47,6 +47,27 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if(_muteki == false)
+        {
+            if (collision.gameObject.tag == "Enemy")
+            {
+                Debug.Log("敵に当たった。");
+
+                SoundManager.Instance.PlaySFX(SFXType.Enemy);
+
+                ScoreManager.Instance.AddScore(_scoreCount);
+
+                this.gameObject.SetActive(false);
+
+                _image.gameObject.SetActive(true);
+
+                UIManager.Instance.ScoreText.text = "スコア:" + ScoreManager.Instance.Score.ToString();
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (_muteki == false)
@@ -74,12 +95,12 @@ public class PlayerController : MonoBehaviour
             _muteki = true;
 
             SoundManager.Instance.PlaySFX(SFXType.Item);
+            SoundManager.Instance.PlayBGM(BGMType.Invincible);
 
             Invoke("MuteliOn", _mutekiTime);
         }
 
         Destroy(collision.gameObject);
-        
     }
 
     private void MuteliOn()
@@ -87,6 +108,7 @@ public class PlayerController : MonoBehaviour
         _muteki = false;
 
         Debug.Log("タイムアップ");
+        SoundManager.Instance.PlayBGM(BGMType.Game);
     }
 
     void Pause()
